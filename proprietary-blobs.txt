@@ -1,3 +1,10 @@
+app/MobileFeliCaClient.apk
+app/MobileFeliCaMenuApp.apk
+app/MobileFeliCaSettingApp.apk
+app/MobileFeliCaWebPluginBoot.apk
+earlyuninstallable/MobileFeliCaMenuMainApp.apk
+earlyuninstallable/MobileFeliCaWebPlugin.apk
+earlyuninstallable/iD.apk
 etc/Bluetooth_cal.acdb
 etc/General_cal.acdb
 etc/Global_cal.acdb
@@ -5,6 +12,21 @@ etc/Handset_cal.acdb
 etc/Hdmi_cal.acdb
 etc/Headset_cal.acdb
 etc/Speaker_cal.acdb
+etc/felica/air.png
+etc/felica/id.png
+etc/felica/mfm.cfg
+etc/felica/portal_icon.png
+etc/felica/bookmark.cfg
+etc/felica/mfc_falp.cfg
+etc/felica/mfs.cfg
+etc/felica/toku.png
+etc/felica/No_ticket.png
+etc/felica/common.cfg
+etc/felica/mfc_push.cfg
+etc/felica/money.png
+etc/felica/train.png
+etc/snfc/auto_polling.cfg
+etc/snfc/rf.cfg
 etc/firmware/a330_pfp.fw
 etc/firmware/a330_pm4.fw
 etc/firmware/fw_bcmdhd_apsta.bin
@@ -61,6 +83,9 @@ lib/libHDR.so
 lib/libmorpho_noise_reduction.so
 lib/libmorpho_image_stab31.so
 lib/libmmjpeg_interface.so
+lib/libnfc_ndef.so
+lib/libnfc_ndef_sony.so
+lib/libnfc_sony.so
 lib/libqomx_core.so
 ## Vendor
 vendor/lib/drm/libdrmwvmplugin.so
@@ -245,6 +270,3 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/libxml.so
 vendor/lib/pp_proc_plugin.so
-vendor/firmware/BCM20791B5_002.006.013.0011.0027_LGE_A1_I2C_NCD_Signed_ORC.ncd
-vendor/firmware/BCM20791B5_002.006.013.0011.0027_LGE_A1_PreI2C_NCD_Signed_ORC.ncd
-vendor/firmware/BCM4335B0_002.001.006.0191.0201_ORC.hcd
