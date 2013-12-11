@@ -41,6 +41,12 @@ etc/firmware/venus.b01
 etc/firmware/venus.b02
 etc/firmware/venus.b03
 etc/firmware/venus.b04
+
+#dcm_emoji
+lib/libDecoEmojiJniNative.so
+lib/libemoji_docomo.so
+lib/libemojidata_type2_docomo.so
+
 lib/libvss_dmi_qcci.so
 lib/libvss_common_iface.so
 lib/libvss_common_idl.so
