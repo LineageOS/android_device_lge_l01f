@@ -23,3 +23,6 @@ TARGET_OTA_ASSERT_DEVICE := d802,g2,galbi,d800,l01f
 G2_DTS_TARGET := msm8974-g2-dcm
 
 BOARD_RECOVERY_SWIPE := true
+
+#for test
+TARGET_KERNEL_SOURCE := kernel/lge/msm8974dcm
