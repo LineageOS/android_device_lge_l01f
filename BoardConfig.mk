@@ -24,5 +24,3 @@ G2_DTS_TARGET := msm8974-g2-dcm
 
 BOARD_RECOVERY_SWIPE := true
 
-#for test
-TARGET_KERNEL_SOURCE := kernel/lge/msm8974dcm
