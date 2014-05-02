@@ -1,0 +1,75 @@
+## Be careful to use "exec" command.
+## If you execute a non-existing file, an additional init process can be created!
+# LGE_CHANGE_S, 20130307, LGE-FeliCa@lge.com
+on post-fs-data
+    chmod 0775 /felica
+    chown system system /felica
+    mkdir /felica/knife 0771 system system
+# LGE_CHANGE_S, 20130307, LGE-FeliCa@lge.com
+# LGE_CHANGE_S, 20130325, G2-FS@lge.com
+    chmod 0771 /OneSeg
+    chown system system /OneSeg
+
+    chmod 0771 /seclog
+    chown system system /seclog
+# LGE_CHANGE_E, 20130325, G2-FS@lge.com
+#LGE_CHANGE_S 2013.3.21 jaeho.cho@lge.com add change ownership and mode for diag_enable
+    chown system system /sys/devices/platform/lg_diag_cmd/diag_enable
+    chmod 0660 /sys/devices/platform/lg_diag_cmd/diag_enable
+#LGE_CHANGE_E 2013.3.21 jaeho.cho@lge.com add change ownership and mode for diag_enable
+
+# LGE_CHANGE_S, 20130411, alan.park@lge.com, TOMOYO Linux log directory
+# create ccs
+    mkdir /seclog/ccs 0755 root root
+    mkdir /seclog/ccs/audit 0755 root root
+# LGE_CHANGE_E, 20130411, alan.park@lge.com, TOMOYO Linux log directory
+
+# [NFC_PORTING_FOR_DCM][S]
+    mkdir /felica/cflock 0771 nfclock nfclock
+# [NFC_PORTING_FOR_DCM][E]
+
+#LGE_CHANGE_S, [NFC][sungwook.ahn@lge.com], 2013-02-20, NFC Bring up
+symlink /dev/ttyHSL2 /dev/snfc_uart
+#symlink /dev/i2c-0 /dev/snfc_i2c
+#LGE_CHANGE_E, [NFC][sungwook.ahn@lge.com], 2013-02-20, NFC Bring up
+
+
+on fs
+    # LGE_UPDATE_START, 2013/03/13, G2-FS@lge.com
+    mkdir /felica 0775 system system
+    mkdir /OneSeg 0771 system system
+    mkdir /seclog 0771 system system
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/felica
+    exec /system/bin/e2fsck -p /dev/block/platform/msm_sdcc.1/by-name/felica
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/felica /felica nosuid nodev barrier=1 noauto_da_alloc
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/OneSeg
+    exec /system/bin/e2fsck -p /dev/block/platform/msm_sdcc.1/by-name/OneSeg
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/OneSeg /OneSeg nodev nosuid barrier=1 noauto_da_alloc
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/seclog
+    exec /system/bin/e2fsck -p /dev/block/platform/msm_sdcc.1/by-name/seclog
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/seclog /seclog nodev nosuid barrier=1 noauto_da_alloc
+   # LGE_UPDATE_END
+
+# LGE_CHANGE_S, 20130410, jinmo.koo@lge.com, enabling remotelock as dev-admin
+    mkdir /data/system 0775 system system
+# LGE_CHANGE_E, 20130410, jinmo.koo@lge.com, enabling remotelock as dev-admin
+
+on init
+#LGE_CHANGE_S, G2-FS@lge.com, 2013-06-24, add dcm environment variable
+    export EXTERNAL_STORAGE_DOCOMO ""
+#LGE_CHANGE_E, G2-FS@lge.com, 2013-06-24, add dcm environment variable
+    # LGE_UPDATE_START, 2013/03/13, G2-FS@lge.com
+#    exec /sbin/setup_fs_static \
+#        /dev/block/platform/msm_sdcc.1/by-name/felica \
+#        /dev/block/platform/msm_sdcc.1/by-name/OneSeg \
+#        /dev/block/platform/msm_sdcc.1/by-name/seclog \
+#        no_reboot
+    # LGE_UPDATE_END
+#2013.03.21 add symlink for Docomo PlayReady DRM[START] 
+	symlink /storage/emulated/legacy /storage/emulated/0
+#2013.03.21 add symlink for Docomo PlayReady DRM[END] 
+
+

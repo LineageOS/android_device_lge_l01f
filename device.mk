@@ -15,6 +15,12 @@
 #
 
 $(call inherit-product-if-exists, vendor/lge/l01f/l01f-vendor.mk)
+
+
+# root dir
+PRODUCT_COPY_FILES += \
+    device/lge/l01f/rootdir/init.g2_product.rc:root/init.g2_product.rc
+
 $(call inherit-product, device/lge/g2-common/g2.mk)
 
 ## overlays
