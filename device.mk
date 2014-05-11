@@ -15,17 +15,10 @@
 #
 
 $(call inherit-product-if-exists, vendor/lge/l01f/l01f-vendor.mk)
-
-
-# root dir
-PRODUCT_COPY_FILES += \
-    device/lge/l01f/rootdir/init.g2_product.rc:root/init.g2_product.rc
-
 $(call inherit-product, device/lge/g2-common/g2.mk)
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	telephony.lteOnGsmDevice=1 \
@@ -34,7 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-# Default Locale
+# default locale
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.language=ja \
     ro.product.locale.region=JP

@@ -18,16 +18,16 @@
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
 # Get the long list of APNs
-PRODUCT_COPY_FILES := device/lge/L01F/overlay/packages/providers/TelephonyProvider/res/config.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-PRODUCT_DEVICE := l01f
+PRODUCT_DEVICE := g2
 PRODUCT_NAME := full_l01f
-PRODUCT_BRAND := DOCOMO
-PRODUCT_MODEL := L01F
-PRODUCT_MANUFACTURER := lge
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := L-01F
+PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Inherit from hardware-specific part of the product configuration

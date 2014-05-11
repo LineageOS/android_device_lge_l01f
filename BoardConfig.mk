@@ -18,9 +18,7 @@ include device/lge/g2-common/BoardConfigCommon.mk
 
 TARGET_KERNEL_CONFIG := cyanogenmod_l01f_defconfig
 
-TARGET_OTA_ASSERT_DEVICE := d802,g2,galbi,d800,l01f
+TARGET_OTA_ASSERT_DEVICE := l01f,g2,galbi
 
 G2_DTS_TARGET := msm8974-g2-dcm
-
-BOARD_RECOVERY_SWIPE := true
 
