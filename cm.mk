@@ -12,7 +12,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product, device/lge/l01f/l01f.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := g2
+PRODUCT_DEVICE := l01f
 PRODUCT_NAME := cm_l01f
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := L-01F

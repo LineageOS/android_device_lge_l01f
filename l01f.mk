@@ -23,7 +23,7 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-PRODUCT_DEVICE := g2
+PRODUCT_DEVICE := l01f
 PRODUCT_NAME := full_l01f
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := L-01F
