@@ -31,8 +31,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.language=ja \
     ro.product.locale.region=JP
-
-# NFC packages
-PRODUCT_PACKAGES += \
-    nfc_nci.g2 \
-    NfcNci
