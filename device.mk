@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+#NFC
+BOARD_NFC_CXD2235AGG := true
+
 $(call inherit-product-if-exists, vendor/lge/l01f/l01f-vendor.mk)
 $(call inherit-product, device/lge/g2-common/g2.mk)
 

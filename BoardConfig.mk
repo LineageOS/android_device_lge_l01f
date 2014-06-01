@@ -21,4 +21,3 @@ TARGET_KERNEL_CONFIG := cyanogenmod_l01f_defconfig
 TARGET_OTA_ASSERT_DEVICE := l01f,g2,galbi
 
 G2_DTS_TARGET := msm8974-g2-dcm
-
