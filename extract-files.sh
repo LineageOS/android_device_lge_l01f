@@ -1,17 +1,7 @@
 #!/bin/sh
 
-VENDOR=lge
-DEVICE=l01f
+set -e
 
-BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
-rm -rf $BASE/*
-
-for FILE in `cat proprietary-blobs.txt | grep -v ^# | grep -v ^$ `; do
-    DIR=`dirname $FILE`
-    if [ ! -d $BASE/$DIR ]; then
-        mkdir -p $BASE/$DIR
-    fi
-    adb pull /system/$FILE $BASE/$FILE
-done
-
-./setup-makefiles.sh
+export VENDOR=lge
+export DEVICE=l01f
+./../../$VENDOR/g2-common/extract-files.sh $@

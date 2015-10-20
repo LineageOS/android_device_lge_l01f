@@ -18,7 +18,7 @@ include device/lge/g2-common/BoardConfigCommon.mk
 
 TARGET_KERNEL_CONFIG := cyanogenmod_l01f_defconfig
 
-TARGET_OTA_ASSERT_DEVICE := l01f,g2,galbi
+TARGET_OTA_ASSERT_DEVICE := l01f,l-01f,L01F,L-01F,g2,galbi
 
 G2_DTS_TARGET := msm8974-g2-dcm
 
