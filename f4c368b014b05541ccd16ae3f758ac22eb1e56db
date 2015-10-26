@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f2577a7_41dcd473",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-10-26T23:41:02Z",
+      "side": 1,
+      "message": "Is this supposed to allow d800?",
+      "revId": "f4c368b014b05541ccd16ae3f758ac22eb1e56db",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2577a7_21d9c882",
+        "filename": "cm.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-10-26T23:41:02Z",
+      "side": 1,
+      "message": "Just delete this section for now.",
+      "revId": "f4c368b014b05541ccd16ae3f758ac22eb1e56db",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2577a7_01e6cc45",
+        "filename": "proprietary-blobs.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-10-26T23:41:02Z",
+      "side": 1,
+      "message": "This file isn\u0027t used anymore.",
+      "revId": "f4c368b014b05541ccd16ae3f758ac22eb1e56db",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
