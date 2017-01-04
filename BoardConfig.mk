@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2013-2016 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +17,7 @@
 
 include device/lge/g2-common/BoardConfigCommon.mk
 
-TARGET_KERNEL_CONFIG := cyanogenmod_l01f_defconfig
+TARGET_KERNEL_CONFIG := lineageos_l01f_defconfig
 
 TARGET_OTA_ASSERT_DEVICE := l01f,l-01f,L01F,L-01F,g2,galbi
 
